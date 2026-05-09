@@ -1,0 +1,525 @@
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/*home*/
+.firstbody {
+    background: linear-gradient(to bottom, #002B16, #000000);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.starSection {
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+
+.star-link {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.star-img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.star-link span {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: sans-serif;
+    text-shadow: 0 0 5px black;
+}
+
+.star-link:hover .star-img {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 1));
+}
+
+.infoSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.myinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ZainImg {
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+.name {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.major {
+    color: #FFD700;
+    margin-bottom: 5px;
+}
+
+.myworkButton {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border-radius: 25px;
+    background-color: #FFD700;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+/* Skills*/
+.myskills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bigCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #FFD700;
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin: 12px 0;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #FFD700;
+}
+
+.card p {
+    margin: 4px 0 0 0;
+    font-size: 0.85rem;
+    color: #cccccc;
+}
+
+/*Projects*/
+.myprojects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.projectCard {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-10px);
+    border-color: #FFD700;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.projectCard h2 {
+    color: #FFD700;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.projectCard img {
+    width: 50%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #1a1a1a;
+}
+
+.projectCard p {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.projectCard .tech {
+    font-weight: bold;
+    color: #FFD700;
+    font-size: 0.85rem;
+}
+
+/*About*/
+.identitySection {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background: transparent;
+}
+
+.driveCard {
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 24px;
+    padding: 40px;
+    backdrop-filter: blur(15px);
+}
+
+.driveCard h2 {
+    color: #FFD700;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.storyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.storyItem h3 {
+    color: #FFD700;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.storyItem p {
+    color: #e0e0e0;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/*Experience*/
+.experienceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.expCard {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 5px solid #FFD700;
+    border-radius: 15px;
+    padding: 25px;
+    width: 90%;
+    max-width: 900px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.expCard:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.expHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.expCard h2 {
+    color: #FFD700;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.expCard h3 {
+    color: #e0e0e0;
+    margin: 5px 0 15px 0;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.expCard .date {
+    color: #cccccc;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.expCard ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #dddddd;
+}
+
+.expCard li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/*Contact*/
+.contactContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.contactLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.contactCard {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    backdrop-filter: blur(10px);
+}
+
+.contactCard h3 {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.contactBtn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contactBtn:hover {
+    border-color: #FFD700;
+}
+
+.contactForm {
+    flex: 1.5;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.contactForm input,
+.contactForm textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+}
+
+.submitBtn {
+    background: #FFD700;
+    color: black;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.submitBtn:hover {
+    transform: scale(1.02);
+    background: #e6c200;
+}
+
+/* ---Media Queries */
+
+
+/*iPads */
+@media (max-width: 1024px) {
+    .starSection {
+        height: 450px;
+    }
+
+    .star-img {
+        width: 40px;
+    }
+
+    .star-link span {
+        font-size: 12px;
+        display: block;
+    }
+
+    .contactContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contactForm {
+        max-width: 90%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .contactLinks {
+        max-width: 90%;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+/*Phones */
+@media (max-width: 768px) {
+    
+    .starSection {
+        height: 380px;
+    }
+
+    .star-link {
+        transform: translateX(-50%); 
+        width: 65px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .star-img {
+        width: 28px ;
+        margin-bottom: 3px;
+    }
+
+    .star-link span {
+        display: block ;
+        font-size: 9px;        
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+
+    .infoSection {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name {
+        font-size: 1.8rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .myskills {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px 10px;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .bigCard {
+        width: 100%;
+        min-width: unset;
+        max-width: 90%; 
+        margin: 0 auto 20px auto;
+    }
+
+    .card {
+        text-align: left; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .myprojects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .projectCard {
+        width: 90%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .contactContainer {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px 10px;
+        box-sizing: border-box;
+    }
+
+    .contactForm,
+    .contactLinks {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto 20px auto;
+    }
+
+    .expHeader {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
