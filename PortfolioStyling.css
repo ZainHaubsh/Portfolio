@@ -10,6 +10,7 @@ body {
     background: linear-gradient(to bottom, #002B16, #000000);
     min-height: 100vh;
     color: white;
+    scroll-behavior: smooth;
 }
 
 .firstbody {
@@ -29,10 +30,9 @@ body {
 /*  Nav Bar  */
 .navSection {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; 
     align-items: center;
-    gap: 30px;
-    padding: 20px 0;
+    padding: 0 40px; 
     width: 100%;
     height: 65px;
     background: rgba(0, 20, 10, 0.95);
@@ -46,6 +46,29 @@ body {
     z-index: 1010;
 }
 
+.logo-container,
+.nav-spacer {
+    flex: 1;
+    display: flex;
+}
+
+.logo-container {
+    justify-content: flex-start;
+}
+
+.logo {
+    height: 45px; 
+    width: auto;  
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex: 2; 
+}
+
 .link {
     color: white;
     text-decoration: none;
@@ -55,6 +78,7 @@ body {
     padding: 8px 16px;
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
+    white-space: nowrap; 
 }
 
 .link:hover {
@@ -135,6 +159,32 @@ body {
     margin-left: 240px;
     width: calc(100% - 240px);
 }
+/* 1. Define the keyframes animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.myinfo .ZainImg,
+.myinfo .name,
+.myinfo .major,
+.myinfo h4,
+.myinfo h3 {
+    opacity: 0; 
+    animation: fadeInUp 1.0s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.myinfo .ZainImg { animation-delay: 0.1s; }
+.myinfo .name    { animation-delay: 0.3s; }
+.myinfo .major   { animation-delay: 0.5s; }
+.myinfo h4       { animation-delay: 0.6s; }
+.myinfo h3       { animation-delay: 0.7s; }
 
 /*  Layout Sections  */
 .aboutSection {
@@ -339,22 +389,29 @@ body {
 }
 
 .projectCard {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    border-radius: 15px;
-    padding: 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 18px;
+    padding: 22px;
     text-align: center;
-    backdrop-filter: blur(12px);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(14px);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
-
+.projectCard a {
+    color: #FFD700;
+    text-decoration: none;
+    pointer-events: auto;
+}
+.projectCard  a:hover {
+    color: white;
+}
 .projectCard:hover {
     transform: translateY(-10px);
     border-color: #FFD700;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.projectCard d2 {
+.projectCard h2 {
     color: #FFD700;
     margin-bottom: 15px;
     font-size: 1.5rem;
