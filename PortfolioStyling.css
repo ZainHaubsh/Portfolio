@@ -27,7 +27,7 @@ body {
     flex: 1;
 }
 
-/*  Nav Bar  */
+/* Nav Bar  */
 .navSection {
     display: flex;
     justify-content: space-between; 
@@ -46,14 +46,16 @@ body {
     z-index: 1010;
 }
 
-.logo-container,
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
 .nav-spacer {
     flex: 1;
     display: flex;
-}
-
-.logo-container {
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 .logo {
@@ -86,7 +88,7 @@ body {
     border-bottom: 2px solid #FFD700;
 }
 
-/*  Fixed Sidebar Panel  */
+/*  Fixed Sidebar  */
 .sidebarContainer {
     display: flex;
     flex-direction: column;
@@ -170,7 +172,6 @@ body {
         transform: translateY(0);
     }
 }
-/* Sidebar CV Button */
 .cvBtn {
     display: inline-flex;
     align-items: center;
@@ -178,7 +179,7 @@ body {
     gap: 8px;
     margin-top: 20px;
     padding: 10px 24px;
-    width: 80%; /* Scales nicely inside the sidebar container */
+    width: 80%; 
     box-sizing: border-box;
     background-color: transparent;
     color: #FFD700;
@@ -674,15 +675,39 @@ body {
     }
 
     .navSection {
-        gap: 15px;
-        padding: 15px 10px;
-        flex-wrap: wrap;
-        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;        
+        padding: 12px 15px;
+        gap: 10px;            
+    }
+
+    .logo-container {
+        flex: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo {
+        height: 38px;         
+    }
+
+    .nav-spacer {
+        display: none;
+    }
+
+    .nav-links {
+        flex: none;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;       
+        gap: 12px 20px;        
     }
 
     .link {
-        font-size: 13px;
-        padding: 4px 8px;
+        font-size: 14px;
+        padding: 4px 6px;
     }
 
     .sidebarContainer {
@@ -694,7 +719,7 @@ body {
         border-right: none;
         border-bottom: 1px solid rgba(255, 215, 0, 0.15);
         background: rgba(0, 15, 8, 0.2);
-        margin-top: 90px;
+        margin-top: 115px;   
     }
 
     .ZainImg {
