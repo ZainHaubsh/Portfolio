@@ -159,7 +159,7 @@ body {
     margin-left: 240px;
     width: calc(100% - 240px);
 }
-/* 1. Define the keyframes animation */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -170,6 +170,35 @@ body {
         transform: translateY(0);
     }
 }
+/* Sidebar CV Button */
+.cvBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 10px 24px;
+    width: 80%; /* Scales nicely inside the sidebar container */
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #FFD700;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    border: 2px solid #FFD700;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cvBtn:hover {
+    background-color: #FFD700;
+    color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
 
 .myinfo .ZainImg,
 .myinfo .name,
@@ -185,6 +214,7 @@ body {
 .myinfo .major   { animation-delay: 0.5s; }
 .myinfo h4       { animation-delay: 0.6s; }
 .myinfo h3       { animation-delay: 0.7s; }
+.myinfo .cvBtn {animation-delay: 0.8s;}
 
 /*  Layout Sections  */
 .aboutSection {
