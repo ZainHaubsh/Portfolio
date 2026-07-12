@@ -1,4 +1,3 @@
-
 html,
 body {
     max-width: 100%;
@@ -30,9 +29,9 @@ body {
 /* Nav Bar  */
 .navSection {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    padding: 0 40px; 
+    padding: 0 40px;
     width: 100%;
     height: 65px;
     background: rgba(0, 20, 10, 0.95);
@@ -59,8 +58,8 @@ body {
 }
 
 .logo {
-    height: 45px; 
-    width: auto;  
+    height: 45px;
+    width: auto;
     object-fit: contain;
 }
 
@@ -68,7 +67,7 @@ body {
     display: flex;
     gap: 30px;
     justify-content: center;
-    flex: 2; 
+    flex: 2;
 }
 
 .link {
@@ -80,7 +79,7 @@ body {
     padding: 8px 16px;
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 .link:hover {
@@ -167,11 +166,13 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 .cvBtn {
     display: inline-flex;
     align-items: center;
@@ -179,7 +180,7 @@ body {
     gap: 8px;
     margin-top: 20px;
     padding: 10px 24px;
-    width: 80%; 
+    width: 80%;
     box-sizing: border-box;
     background-color: transparent;
     color: #FFD700;
@@ -207,16 +208,33 @@ body {
 .myinfo h4,
 .myinfo h3,
 .myinfo .cvBtn {
-    opacity: 0; 
+    opacity: 0;
     animation: fadeInUp 1.0s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-.myinfo .ZainImg { animation-delay: 0.1s; }
-.myinfo .name    { animation-delay: 0.3s; }
-.myinfo .major   { animation-delay: 0.5s; }
-.myinfo h4       { animation-delay: 0.7s; }
-.myinfo h3       { animation-delay: 0.9s; }
-.myinfo .cvBtn { animation-delay: 0.11s;}
+.myinfo .ZainImg {
+    animation-delay: 0.1s;
+}
+
+.myinfo .name {
+    animation-delay: 0.3s;
+}
+
+.myinfo .major {
+    animation-delay: 0.5s;
+}
+
+.myinfo h4 {
+    animation-delay: 0.7s;
+}
+
+.myinfo h3 {
+    animation-delay: 0.9s;
+}
+
+.myinfo .cvBtn {
+    animation-delay: 0.11s;
+}
 
 /*  Layout Sections  */
 .aboutSection {
@@ -420,14 +438,14 @@ body {
     .bigCard:nth-child(4) .iconGrid {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         justify-content: center;
         gap: 16px;
     }
 
     .bigCard:nth-child(4) .skillBadge {
         flex: 0 0 auto;
-        width: 110px;  
+        width: 110px;
         min-width: 110px;
     }
 }
@@ -443,7 +461,7 @@ body {
 }
 
 .projectCard {
-    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
     border: 1px solid rgba(255, 215, 0, 0.15);
     border-radius: 16px;
     padding: 22px;
@@ -451,14 +469,17 @@ body {
     backdrop-filter: blur(14px);
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
+
 .projectCard a {
     color: #FFD700;
     text-decoration: none;
     pointer-events: auto;
 }
-.projectCard  a:hover {
+
+.projectCard a:hover {
     color: white;
 }
+
 .projectCard:hover {
     transform: translateY(-10px);
     border-color: #FFD700;
@@ -492,6 +513,7 @@ body {
     color: #FFD700;
     font-size: 0.85rem;
 }
+
 .projectBtn {
     flex: 1;
     text-align: center;
@@ -510,7 +532,7 @@ body {
     background: #FFD700;
     color: #121212;
     border-color: #FFD700;
-    box-shadow:0 4px 12px rgba(255, 215, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
 }
 
 /* Experience  */
@@ -722,9 +744,9 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: auto;        
+        height: auto;
         padding: 12px 15px;
-        gap: 10px;            
+        gap: 10px;
     }
 
     .logo-container {
@@ -734,7 +756,7 @@ body {
     }
 
     .logo {
-        height: 38px;         
+        height: 38px;
     }
 
     .nav-spacer {
@@ -745,8 +767,8 @@ body {
         flex: none;
         width: 100%;
         justify-content: center;
-        flex-wrap: wrap;       
-        gap: 12px 20px;        
+        flex-wrap: wrap;
+        gap: 12px 20px;
     }
 
     .link {
@@ -763,7 +785,7 @@ body {
         border-right: none;
         border-bottom: 1px solid rgba(255, 215, 0, 0.15);
         background: rgba(0, 15, 8, 0.2);
-        margin-top: 115px;   
+        margin-top: 115px;
     }
 
     .ZainImg {
