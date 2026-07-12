@@ -205,7 +205,8 @@ body {
 .myinfo .name,
 .myinfo .major,
 .myinfo h4,
-.myinfo h3 {
+.myinfo h3,
+.myinfo .cvBtn {
     opacity: 0; 
     animation: fadeInUp 1.0s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
@@ -213,22 +214,22 @@ body {
 .myinfo .ZainImg { animation-delay: 0.1s; }
 .myinfo .name    { animation-delay: 0.3s; }
 .myinfo .major   { animation-delay: 0.5s; }
-.myinfo h4       { animation-delay: 0.6s; }
-.myinfo h3       { animation-delay: 0.7s; }
-.myinfo .cvBtn {animation-delay: 0.8s;}
+.myinfo h4       { animation-delay: 0.7s; }
+.myinfo h3       { animation-delay: 0.9s; }
+.myinfo .cvBtn { animation-delay: 0.11s;}
 
 /*  Layout Sections  */
 .aboutSection {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 40px;
+    padding: 30px 40px;
     width: 100%;
     box-sizing: border-box;
 }
 
 .infoSection {
-    padding: 60px 40px;
+    padding: 30px 40px;
     width: 100%;
     box-sizing: border-box;
     display: flex;
@@ -410,11 +411,33 @@ body {
     color: white;
 }
 
-/*  Projects Showcase Card Grids  */
+@media (min-width: 1340px) {
+    .bigCard:nth-child(4) {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .bigCard:nth-child(4) .iconGrid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .bigCard:nth-child(4) .skillBadge {
+        flex: 0 0 auto;
+        width: 110px;  
+        min-width: 110px;
+    }
+}
+
+
+/*  Projects */
 .myprojects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     padding: 40px 0;
     width: 100%;
 }
@@ -422,7 +445,7 @@ body {
 .projectCard {
     background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
     border: 1px solid rgba(255, 215, 0, 0.15);
-    border-radius: 18px;
+    border-radius: 16px;
     padding: 22px;
     text-align: center;
     backdrop-filter: blur(14px);
@@ -468,6 +491,26 @@ body {
     font-weight: bold;
     color: #FFD700;
     font-size: 0.85rem;
+}
+.projectBtn {
+    flex: 1;
+    text-align: center;
+    background: rgba(255, 215, 0, 0.08);
+    color: #FFD700;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.projectBtn:hover {
+    background: #FFD700;
+    color: #121212;
+    border-color: #FFD700;
+    box-shadow:0 4px 12px rgba(255, 215, 0, 0.2);
 }
 
 /* Experience  */
@@ -622,6 +665,7 @@ body {
 }
 
 /*  Media Queries  */
+
 @media (max-width: 1024px) {
     .sidebarContainer {
         width: 200px;
