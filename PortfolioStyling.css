@@ -87,6 +87,16 @@ body {
     border-bottom: 2px solid #FFD700;
 }
 
+.link.active {
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
+
+.navSection.scrolled {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+}
+
 /*  Fixed Sidebar  */
 .sidebarContainer {
     display: flex;
@@ -254,6 +264,11 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.aboutSection,
+.infoSection {
+    scroll-margin-top: 90px;
 }
 
 /*  About  */
@@ -686,6 +701,102 @@ body {
     background: #e6c200;
 }
 
+.submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.formStatus {
+    font-size: 0.9rem;
+    margin: 0;
+    min-height: 1.2em;
+}
+
+.formStatus.success {
+    color: #6be675;
+}
+
+.formStatus.error {
+    color: #ff6b6b;
+}
+
+/*  Scroll Reveal  */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*  Footer  */
+.siteFooter {
+    width: 100%;
+    padding: 20px 40px 30px;
+    text-align: center;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+    margin-top: 20px;
+}
+
+.siteFooter p {
+    margin: 0;
+}
+
+/*  Scroll Progress Bar  */
+#scrollProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: #FFD700;
+    z-index: 1020;
+    transition: width 0.1s ease-out;
+}
+
+/*  Back To Top Button  */
+#backToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    background: rgba(0, 20, 10, 0.9);
+    color: #FFD700;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#backToTopBtn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTopBtn:hover {
+    background: #FFD700;
+    color: #000;
+}
+
 /*  Media Queries  */
 
 @media (max-width: 1024px) {
@@ -871,5 +982,14 @@ body {
 @media (max-width: 380px) {
     .skillBadge {
         width: calc(50% - 6px);
+    }
+}
+
+@media (max-width: 768px) {
+    #backToTopBtn {
+        bottom: 20px;
+        right: 20px;
+        width: 42px;
+        height: 42px;
     }
 }
